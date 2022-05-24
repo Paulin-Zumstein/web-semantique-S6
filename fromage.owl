@@ -1,0 +1,758 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/fromages#"
+     xml:base="http://www.semanticweb.org/fromages"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:fromages="http://www.semanticweb.org/fromages#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/fromages"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#hasForAffinage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fromages#hasForAffinage">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fromages#isAffinageOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fromages#Affinage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#hasForAnimal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fromages#hasForAnimal">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fromages#isMilkOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fromages#Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#hasForPasteurisation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fromages#hasForPasteurisation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fromages#isPasteurisationOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fromages#Pasteurisation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#hasForRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fromages#hasForRegion">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fromages#isRegionOfFromage"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#hasForSalage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fromages#hasForSalage">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fromages#isSalageOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fromages#Salage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#isAffinageOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fromages#isAffinageOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#isMilkOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fromages#isMilkOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#isPasteurisationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fromages#isPasteurisationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#isRegionOfFromage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fromages#isRegionOfFromage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#isSalageOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fromages#isSalageOf"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <owl:inverseOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#matiereGrasse -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fromages#matiereGrasse">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Affinage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#Affinage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fromages#Conception"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#Animal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Conception -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#Conception"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#NosFrais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#NosFrais">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#NosFromages -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#NosFromages"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#NosGras -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#NosGras">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fromages#NosFromages"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fromages#matiereGrasse"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#NosPateMolleCrouteFleurie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#NosPateMolleCrouteFleurie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#NosPateMolleCrouteLavee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#NosPateMolleCrouteLavee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#NosPatePersille -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#NosPatePersille">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#NosPatePresseEtCuite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#NosPatePresseEtCuite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#NosPatePresseEtNonCuite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#NosPatePresseEtNonCuite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Pasteurisation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#Pasteurisation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fromages#Conception"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#Region"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Salage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fromages#Salage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fromages#Conception"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#AuvergneRhoneAlpes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#AuvergneRhoneAlpes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+        <isRegionOfFromage rdf:resource="http://www.semanticweb.org/fromages#Beaufort"/>
+        <isRegionOfFromage rdf:resource="http://www.semanticweb.org/fromages#MontDOr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Beaufort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Beaufort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosGras"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosPatePresseEtCuite"/>
+        <hasForAffinage rdf:resource="http://www.semanticweb.org/fromages#1MoisEtPlus"/>
+        <hasForAnimal rdf:resource="http://www.semanticweb.org/fromages#Vache"/>
+        <hasForPasteurisation rdf:resource="http://www.semanticweb.org/fromages#NonPasteurise"/>
+        <hasForRegion rdf:resource="http://www.semanticweb.org/fromages#AuvergneRhoneAlpes"/>
+        <hasForSalage rdf:resource="http://www.semanticweb.org/fromages#SalageASec"/>
+        <matiereGrasse rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.61</matiereGrasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#BourgogneFrancheComte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#BourgogneFrancheComte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+        <isRegionOfFromage rdf:resource="http://www.semanticweb.org/fromages#Roquefort"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Brebis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Brebis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Animal"/>
+        <isMilkOf rdf:resource="http://www.semanticweb.org/fromages#Brie"/>
+        <isMilkOf rdf:resource="http://www.semanticweb.org/fromages#Mozzarella"/>
+        <isMilkOf rdf:resource="http://www.semanticweb.org/fromages#Roquefort"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Bretagne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Bretagne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+        <isRegionOfFromage rdf:resource="http://www.semanticweb.org/fromages#Camembert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Brie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Brie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosPateMolleCrouteFleurie"/>
+        <hasForAffinage rdf:resource="http://www.semanticweb.org/fromages#1JourEtPlus"/>
+        <hasForAnimal rdf:resource="http://www.semanticweb.org/fromages#Brebis"/>
+        <hasForPasteurisation rdf:resource="http://www.semanticweb.org/fromages#Pasteurise"/>
+        <hasForRegion rdf:resource="http://www.semanticweb.org/fromages#Normandie"/>
+        <hasForSalage rdf:resource="http://www.semanticweb.org/fromages#SalageEnBainDeSaumure"/>
+        <matiereGrasse rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.28</matiereGrasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Bufflone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Bufflone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Animal"/>
+        <isMilkOf rdf:resource="http://www.semanticweb.org/fromages#Maroilles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Camembert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Camembert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosPateMolleCrouteFleurie"/>
+        <hasForAffinage rdf:resource="http://www.semanticweb.org/fromages#1JourEtPlus"/>
+        <hasForAnimal rdf:resource="http://www.semanticweb.org/fromages#Vache"/>
+        <hasForPasteurisation rdf:resource="http://www.semanticweb.org/fromages#PasteurisationVariable"/>
+        <hasForRegion rdf:resource="http://www.semanticweb.org/fromages#Bretagne"/>
+        <hasForSalage rdf:resource="http://www.semanticweb.org/fromages#SalageASec"/>
+        <matiereGrasse rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.24</matiereGrasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Cantal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Cantal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosGras"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosPatePresseEtNonCuite"/>
+        <hasForAffinage rdf:resource="http://www.semanticweb.org/fromages#5MoisEtPlus"/>
+        <hasForAnimal rdf:resource="http://www.semanticweb.org/fromages#Vache"/>
+        <hasForPasteurisation rdf:resource="http://www.semanticweb.org/fromages#PasteurisationVariable"/>
+        <hasForRegion rdf:resource="http://www.semanticweb.org/fromages#PaysDeLaLoire"/>
+        <hasForSalage rdf:resource="http://www.semanticweb.org/fromages#SalageEnBainDeSaumure"/>
+        <matiereGrasse rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</matiereGrasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Chevre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Chevre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Animal"/>
+        <isMilkOf rdf:resource="http://www.semanticweb.org/fromages#FourmeDAmbert"/>
+        <isMilkOf rdf:resource="http://www.semanticweb.org/fromages#Ricotta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Corse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Corse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#FourmeDAmbert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#FourmeDAmbert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosGras"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosPatePersille"/>
+        <hasForAffinage rdf:resource="http://www.semanticweb.org/fromages#1MoisEtPlus"/>
+        <hasForAnimal rdf:resource="http://www.semanticweb.org/fromages#Chevre"/>
+        <hasForPasteurisation rdf:resource="http://www.semanticweb.org/fromages#PasteurisationVariable"/>
+        <hasForRegion rdf:resource="http://www.semanticweb.org/fromages#PaysDeLaLoire"/>
+        <hasForSalage rdf:resource="http://www.semanticweb.org/fromages#SalageASec"/>
+        <matiereGrasse rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</matiereGrasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#GrandEst -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#GrandEst">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+        <isRegionOfFromage rdf:resource="http://www.semanticweb.org/fromages#Maroilles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Gruyere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Gruyere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosGras"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosPatePresseEtCuite"/>
+        <hasForAffinage rdf:resource="http://www.semanticweb.org/fromages#5MoisEtPlus"/>
+        <hasForAnimal rdf:resource="http://www.semanticweb.org/fromages#Vache"/>
+        <hasForPasteurisation rdf:resource="http://www.semanticweb.org/fromages#Pasteurise"/>
+        <hasForRegion rdf:resource="http://www.semanticweb.org/fromages#Suisse"/>
+        <hasForSalage rdf:resource="http://www.semanticweb.org/fromages#SalageEnBainDeSaumure"/>
+        <matiereGrasse rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.32</matiereGrasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#HautDeFrance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#HautDeFrance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Italie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Italie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+        <isRegionOfFromage rdf:resource="http://www.semanticweb.org/fromages#Mozzarella"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Laguiole -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Laguiole">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosGras"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosPatePresseEtNonCuite"/>
+        <hasForAffinage rdf:resource="http://www.semanticweb.org/fromages#5MoisEtPlus"/>
+        <hasForAnimal rdf:resource="http://www.semanticweb.org/fromages#Vache"/>
+        <hasForPasteurisation rdf:resource="http://www.semanticweb.org/fromages#PasteurisationVariable"/>
+        <hasForRegion rdf:resource="http://www.semanticweb.org/fromages#PaysDeLaLoire"/>
+        <hasForSalage rdf:resource="http://www.semanticweb.org/fromages#SalageASec"/>
+        <matiereGrasse rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.45</matiereGrasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Maroilles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Maroilles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosPateMolleCrouteLavee"/>
+        <hasForAffinage rdf:resource="http://www.semanticweb.org/fromages#1MoisEtPlus"/>
+        <hasForAnimal rdf:resource="http://www.semanticweb.org/fromages#Bufflone"/>
+        <hasForPasteurisation rdf:resource="http://www.semanticweb.org/fromages#NonPasteurise"/>
+        <hasForRegion rdf:resource="http://www.semanticweb.org/fromages#GrandEst"/>
+        <hasForSalage rdf:resource="http://www.semanticweb.org/fromages#SalageEnBainDeSaumure"/>
+        <matiereGrasse rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.29</matiereGrasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#MontDOr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#MontDOr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosGras"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosPateMolleCrouteLavee"/>
+        <hasForAffinage rdf:resource="http://www.semanticweb.org/fromages#1JourEtPlus"/>
+        <hasForAnimal rdf:resource="http://www.semanticweb.org/fromages#Vache"/>
+        <hasForPasteurisation rdf:resource="http://www.semanticweb.org/fromages#NonPasteurise"/>
+        <hasForRegion rdf:resource="http://www.semanticweb.org/fromages#AuvergneRhoneAlpes"/>
+        <hasForSalage rdf:resource="http://www.semanticweb.org/fromages#SalageASec"/>
+        <matiereGrasse rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.45</matiereGrasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Mozzarella -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Mozzarella">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFrais"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <hasForAffinage rdf:resource="http://www.semanticweb.org/fromages#1MoisEtPlus"/>
+        <hasForAnimal rdf:resource="http://www.semanticweb.org/fromages#Brebis"/>
+        <hasForPasteurisation rdf:resource="http://www.semanticweb.org/fromages#PasteurisationVariable"/>
+        <hasForRegion rdf:resource="http://www.semanticweb.org/fromages#Italie"/>
+        <hasForSalage rdf:resource="http://www.semanticweb.org/fromages#SalageParBrossage"/>
+        <matiereGrasse rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.17</matiereGrasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#NonPasteurise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#NonPasteurise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Conception"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Pasteurisation"/>
+        <isPasteurisationOf rdf:resource="http://www.semanticweb.org/fromages#Beaufort"/>
+        <isPasteurisationOf rdf:resource="http://www.semanticweb.org/fromages#Maroilles"/>
+        <isPasteurisationOf rdf:resource="http://www.semanticweb.org/fromages#MontDOr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Nord -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Nord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+        <isRegionOfFromage rdf:resource="http://www.semanticweb.org/fromages#Ricotta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Normandie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Normandie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+        <isRegionOfFromage rdf:resource="http://www.semanticweb.org/fromages#Brie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Occitanie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Occitanie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#PasteurisationVariable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#PasteurisationVariable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Conception"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Pasteurisation"/>
+        <isPasteurisationOf rdf:resource="http://www.semanticweb.org/fromages#Camembert"/>
+        <isPasteurisationOf rdf:resource="http://www.semanticweb.org/fromages#Cantal"/>
+        <isPasteurisationOf rdf:resource="http://www.semanticweb.org/fromages#FourmeDAmbert"/>
+        <isPasteurisationOf rdf:resource="http://www.semanticweb.org/fromages#Laguiole"/>
+        <isPasteurisationOf rdf:resource="http://www.semanticweb.org/fromages#Mozzarella"/>
+        <isPasteurisationOf rdf:resource="http://www.semanticweb.org/fromages#Ricotta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Pasteurise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Pasteurise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Conception"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Pasteurisation"/>
+        <isPasteurisationOf rdf:resource="http://www.semanticweb.org/fromages#Brie"/>
+        <isPasteurisationOf rdf:resource="http://www.semanticweb.org/fromages#Gruyere"/>
+        <isPasteurisationOf rdf:resource="http://www.semanticweb.org/fromages#Roquefort"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#PaysDeLaLoire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#PaysDeLaLoire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+        <isRegionOfFromage rdf:resource="http://www.semanticweb.org/fromages#Cantal"/>
+        <isRegionOfFromage rdf:resource="http://www.semanticweb.org/fromages#FourmeDAmbert"/>
+        <isRegionOfFromage rdf:resource="http://www.semanticweb.org/fromages#Laguiole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Pyrenees -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Pyrenees">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Ricotta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Ricotta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFrais"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <hasForAffinage rdf:resource="http://www.semanticweb.org/fromages#1JourEtPlus"/>
+        <hasForAnimal rdf:resource="http://www.semanticweb.org/fromages#Chevre"/>
+        <hasForPasteurisation rdf:resource="http://www.semanticweb.org/fromages#PasteurisationVariable"/>
+        <hasForRegion rdf:resource="http://www.semanticweb.org/fromages#Nord"/>
+        <hasForSalage rdf:resource="http://www.semanticweb.org/fromages#SalageASec"/>
+        <matiereGrasse rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.13</matiereGrasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Roquefort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Roquefort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosFromages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosGras"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#NosPatePersille"/>
+        <hasForAffinage rdf:resource="http://www.semanticweb.org/fromages#1MoisEtPlus"/>
+        <hasForAnimal rdf:resource="http://www.semanticweb.org/fromages#Brebis"/>
+        <hasForPasteurisation rdf:resource="http://www.semanticweb.org/fromages#Pasteurise"/>
+        <hasForRegion rdf:resource="http://www.semanticweb.org/fromages#BourgogneFrancheComte"/>
+        <hasForSalage rdf:resource="http://www.semanticweb.org/fromages#SalageParBrossage"/>
+        <matiereGrasse rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.31</matiereGrasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#SalageASec -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#SalageASec">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Conception"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Salage"/>
+        <isSalageOf rdf:resource="http://www.semanticweb.org/fromages#Beaufort"/>
+        <isSalageOf rdf:resource="http://www.semanticweb.org/fromages#Camembert"/>
+        <isSalageOf rdf:resource="http://www.semanticweb.org/fromages#FourmeDAmbert"/>
+        <isSalageOf rdf:resource="http://www.semanticweb.org/fromages#Laguiole"/>
+        <isSalageOf rdf:resource="http://www.semanticweb.org/fromages#MontDOr"/>
+        <isSalageOf rdf:resource="http://www.semanticweb.org/fromages#Ricotta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#SalageEnBainDeSaumure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#SalageEnBainDeSaumure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Conception"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Salage"/>
+        <isSalageOf rdf:resource="http://www.semanticweb.org/fromages#Brie"/>
+        <isSalageOf rdf:resource="http://www.semanticweb.org/fromages#Cantal"/>
+        <isSalageOf rdf:resource="http://www.semanticweb.org/fromages#Gruyere"/>
+        <isSalageOf rdf:resource="http://www.semanticweb.org/fromages#Maroilles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#SalageParBrossage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#SalageParBrossage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Conception"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Salage"/>
+        <isSalageOf rdf:resource="http://www.semanticweb.org/fromages#Mozzarella"/>
+        <isSalageOf rdf:resource="http://www.semanticweb.org/fromages#Roquefort"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#SansAffinage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#SansAffinage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Affinage"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Conception"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Suisse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Suisse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Region"/>
+        <isRegionOfFromage rdf:resource="http://www.semanticweb.org/fromages#Gruyere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#Vache -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#Vache">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Animal"/>
+        <isMilkOf rdf:resource="http://www.semanticweb.org/fromages#Beaufort"/>
+        <isMilkOf rdf:resource="http://www.semanticweb.org/fromages#Camembert"/>
+        <isMilkOf rdf:resource="http://www.semanticweb.org/fromages#Cantal"/>
+        <isMilkOf rdf:resource="http://www.semanticweb.org/fromages#Gruyere"/>
+        <isMilkOf rdf:resource="http://www.semanticweb.org/fromages#Laguiole"/>
+        <isMilkOf rdf:resource="http://www.semanticweb.org/fromages#MontDOr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#1JourEtPlus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#1JourEtPlus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Affinage"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Conception"/>
+        <isAffinageOf rdf:resource="http://www.semanticweb.org/fromages#Brie"/>
+        <isAffinageOf rdf:resource="http://www.semanticweb.org/fromages#Camembert"/>
+        <isAffinageOf rdf:resource="http://www.semanticweb.org/fromages#MontDOr"/>
+        <isAffinageOf rdf:resource="http://www.semanticweb.org/fromages#Ricotta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#1MoisEtPlus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#1MoisEtPlus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Affinage"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Conception"/>
+        <isAffinageOf rdf:resource="http://www.semanticweb.org/fromages#Beaufort"/>
+        <isAffinageOf rdf:resource="http://www.semanticweb.org/fromages#FourmeDAmbert"/>
+        <isAffinageOf rdf:resource="http://www.semanticweb.org/fromages#Maroilles"/>
+        <isAffinageOf rdf:resource="http://www.semanticweb.org/fromages#Mozzarella"/>
+        <isAffinageOf rdf:resource="http://www.semanticweb.org/fromages#Roquefort"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fromages#5MoisEtPlus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fromages#5MoisEtPlus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Affinage"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/fromages#Conception"/>
+        <isAffinageOf rdf:resource="http://www.semanticweb.org/fromages#Cantal"/>
+        <isAffinageOf rdf:resource="http://www.semanticweb.org/fromages#Gruyere"/>
+        <isAffinageOf rdf:resource="http://www.semanticweb.org/fromages#Laguiole"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
